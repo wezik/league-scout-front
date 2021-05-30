@@ -1,0 +1,1 @@
+# league-scout-front
