@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexStyle.css">
+    <link rel="stylesheet" href="profileStyle.css">
+    <title>League Scout</title>
+    <script src="indexScript.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><button id=logo><h1>League<br>Scout</h1></button></a></div>
+        <div class="search">
+            <input type="text" placeholder="Summoner Name" id="search_field"></textarea>
+            <button id="search_button">Search</button>
+        </div>
+        <div class="server_selection">
+            <select name="Server" id="server_select">
+                <option value="EUNE">EUNE</option>
+                <option value="EUW">EUW</option>
+                <option value="NA">NA</option>
+                <option value="KR">KR</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="header_profile">
+                <div class="header_left">
+                    <div class="icon_parent">                    
+                        <img id ="summoner_icon">
+                    </div>
+                    <h3><span id="summoner_level"></span></h3>
+                </div>
+                <div class="header_right">
+                    <h1><span id="summoner_name"></span></h1>
+                    <button id="live_game">Live Game</button>
+                </div>
+                <img id="bg">
+            </div>
+            <div class="hero_profile">
+                <div class="hero_left">
+                    <div class="rank_container">
+                        <h4><span class="queue">Solo Queue</span></h4>
+                        <h2><span id="rank_name">UNRANKED</span><br></h2>
+                        <p>
+                            <span id="lp"></span>
+                        </p>
+                        <div class="rank_img_parent">
+                            <img id="rank_img">
+                        </div>
+                        <p>
+                            <span id="win_percentage"></span><br>
+                            <span id="wins"></span>
+                             <span id="seperator"></span> 
+                             <span id="losses"></span>
+                        </p>
+                    </div>
+                    <div class="rank_container">
+                        <br>
+                        <br>
+                        <h4><span class="flex_queue">Flex Queue</span></h4>
+                        <h2><span id="flex_rank_name">UNRANKED</span><br></h2>
+                        <p>
+                            <span id="flex_lp"></span>
+                        </p>
+                        <div class="rank_img_parent">
+                            <img id="flex_rank_img">
+                        </div>
+                        <p>
+                            <span id="flex_win_percentage"></span><br>
+                            <span id="flex_wins"></span>
+                             <span id="flex_seperator"></span> 
+                             <span id="flex_losses"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="hero_right">
+                    <div id="match_history" class="match_history">
+                    </div>
+                    <div class="load_more">
+                        <button id=load_more_btn>Load More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

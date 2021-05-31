@@ -1,0 +1,225 @@
+.header_profile {
+    width: 100%;
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    border-radius: .5em;
+    margin-bottom: 2em;
+    background-position-y: 25%;
+    .header_left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .icon_parent {
+            width: 100%;
+            #summoner_icon {
+                max-width: 128px;
+                max-height: 128px;
+                border-radius: 1em;
+                box-shadow: 2px 2px 10px black;
+            }
+        }
+        #summoner_level {
+            position: relative;
+            top: -2em;
+            text-shadow: 2px 2px 10px black;
+        }
+    }
+    .header_right {
+        width: 100%;
+        #summoner_name {
+            text-shadow: 2px 2px 10px black;
+        }
+        button {
+            font-family: "Poppins";
+            font-size: 1em;
+            background: rgba(201, 201, 201, 0.623);
+            transition-duration: 0.1s;
+            color: rgb(0, 0, 0);
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: rgb(255, 255, 255);
+        }
+    }
+}
+
+.hero_profile {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    .hero_left {
+        width: 100%;
+        .rank_container {
+            width: 100%;
+            display:grid;
+            grid-template-columns: 100%;
+            text-align: center;
+            #wins, #flex_wins {
+                color: rgb(80, 155, 80);
+            }
+            #losses, #flex_losses {
+                color:rgb(228, 72, 72);
+            }
+            #rank_img, #flex_rank_img {
+                width: 100%;
+            }
+            h4,h2,p {
+                margin: 0;
+                padding: 0;
+            }
+            h4 {
+                font-weight: 400;
+                font-size: 1.1em;
+            }
+            #lp {
+                font-weight: 300;
+                text-align: right;
+            }
+        }
+    }
+    #match_won {
+        background-color: rgba(70, 118, 126, 0.425);
+    }
+    #match_lost {
+        background-color: rgba(112, 57, 62, 0.425);
+    }
+    .hero_right  {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        .match_history {
+            display: flex;
+            flex-direction: column;
+            grid-gap:1em;
+            width: 90%;
+            .match {
+                padding: 1em;
+                border-radius: .5em;
+                display: grid;
+                grid-template-columns: 40% 20% 40%;
+                max-height: 15%;
+                max-width: 100%;
+                #match_data {
+                    display: grid;
+                    grid-template-columns: 33% 33% 33%;
+                    #first {
+                        display: grid;
+                        grid-template-columns: auto;
+                        height: 100%;
+                        #queue {
+                            font-size: .7em;
+                        }
+                        #date {
+                            align-self: flex-end;
+                            font-size: .6em;
+                        }
+                        #game_time {
+                            align-self: flex-start;
+                            font-size: .9em;
+                        }
+                    }
+                    #second {
+                        justify-self: center;
+                        align-self: center;
+                        display: grid;
+                        grid-template-rows: 70% 30%;
+                        #match_champion_icon {
+                            max-height: 4.5em;
+                        }
+                        #ss_wrapper {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    #third {
+                        justify-self: center;
+                        align-self: center;
+                        text-align: center;
+                        #deaths_stat {
+                            color: rgb(219, 150, 150);
+                        }
+                        #farm_stat {
+                            color: rgb(151, 151, 151);
+                        }
+                    }
+                }
+                #item_data {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: .1em;
+                    height: fit-content;
+                    width: fit-content;
+                    justify-self: center;
+                    align-self: center;
+                    #item {
+                        min-height: 32px;
+                        min-width: 32px;
+                        max-height: 32px;
+                        max-width: 32px;
+                        background-color: rgba(0, 0, 0, 0.418);
+                        border-radius: .5em;
+                    }
+                }
+                #participants_data {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    align-self: center;
+                    justify-self: left;
+                    #team {
+                        padding: .6em;
+                        width: 100%;
+                        a,p {
+                            text-decoration: none;
+                            color: rgb(168, 168, 168);
+                        }
+                        #summoner {
+                            a,p {
+                                color: rgb(214, 214, 214);
+                            }
+                        }
+                        #participant,#summoner {
+                            margin-bottom: .1em;
+                            display: flex;
+                            align-items: center;
+                            #participant_champion_icon {
+                                max-height: 1.4em;
+                            }
+                            #participant_name {
+                                margin-left: .2em;
+                                font-size: .7em;
+                                a,p {
+                                    overflow-wrap: break-word;
+                                    word-wrap: break-word;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .load_more {
+            padding-top: 1.5em;
+            #load_more_btn {
+                font-size: 1.1em;
+                font-family: "Poppins";
+                font-weight: 700;
+                background: none;
+                border: none;
+                outline: none;
+                color: white;
+            }
+            #load_more_btn:hover {
+                color: rgb(157, 176, 201);
+                cursor: pointer;
+            }
+        }
+    }
+}
