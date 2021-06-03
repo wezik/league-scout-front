@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+/* *Global* */
+/* Variables */
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  display: flexbox;
+  font-family: "Roboto", "Arial";
+}
+
+/* Nav Bar */
+nav {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: .2em 1em;
+  background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+}
+
+nav .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .navigation .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  margin-right: 7%;
+}
+
+nav .navigation .logo a {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+nav .navigation .search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 7%;
+  width: 100%;
+}
+
+nav .navigation .search-bar .search-field {
+  width: 30%;
+  font-family: "Roboto", "Arial";
+  font-weight: 400;
+  outline: none;
+  border: none;
+  border-radius: .5em;
+  height: 2em;
+  width: 65%;
+  min-width: 20em;
+}
+
+nav .navigation .search-bar .search-button {
+  height: 3em;
+  width: 3em;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+nav .navigation .search-bar .search-button i {
+  font-size: 1.5em;
+  color: white;
+}
+
+nav .navigation .search-bar .search-button i:hover {
+  color: #c7c4d6;
+}
+
+nav .navigation .server-selection select {
+  font-family: "Roboto", "Arial";
+  font-weight: 700;
+  font-size: .8em;
+  padding: .5em;
+  background: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+}
+
+nav .navigation .server-selection select option {
+  font-size: 1.1em;
+  font-weight: 400;
+  background-color: #485461;
+}
+
+nav .navigation .server-selection select:hover {
+  color: #c7c4d6;
+}
+
+nav .navigation .other-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .navigation .other-wrapper a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  font-family: "Roboto", "Arial";
+}
+
+nav .navigation .other-wrapper a:hover {
+  color: #c7c4d6;
+}
+
+/* Section */
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1em auto;
+  width: 65%;
+  background: rgba(0, 0, 0, 0.144);
+  border-radius: .5em;
+  min-width: 65em;
+}
+
+section .content {
+  color: white;
+  padding: 2em;
+  width: 100%;
+  height: 100%;
+}
+
+#loader {
+  margin: 2em;
+  border: 6px solid #f3f3f3;
+  /* Light grey */
+  border-top: 6px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=globalStyle.css.map */

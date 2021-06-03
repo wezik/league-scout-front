@@ -1,0 +1,363 @@
+/* Variables */
+
+$red: rgb(184, 67, 67);
+$green: rgb(67, 184, 67);
+$text-border: 1px 1px 0 #000,
+-1px 1px 0 #000,
+1px -1px 0 #000,
+-1px -1px 0 #000,
+0px 1px 0 #000,
+0px -1px 0 #000,
+-1px 0px 0 #000,
+1px 0px 0 #000,
+2px 2px 0 #000,
+-2px 2px 0 #000,
+2px -2px 0 #000,
+-2px -2px 0 #000,
+0px 2px 0 #000,
+0px -2px 0 #000,
+-2px 0px 0 #000,
+2px 0px 0 #000,
+1px 2px 0 #000,
+-1px 2px 0 #000,
+1px -2px 0 #000,
+-1px -2px 0 #000,
+2px 1px 0 #000,
+-2px 1px 0 #000,
+2px -1px 0 #000,
+-2px -1px 0 #000;
+
+/* Profile */
+
+.profile {
+    /* Icon and name */
+    .header {
+        display: flex;
+        background-position-y: 20%;
+        background-position-x: center;
+        border-radius: .5em;
+        .icon {
+            width: 128px;
+            height: 128px;
+            margin: 1em;
+            img {
+                width: 128px;
+                height: 128px;
+                border-radius: 10px;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.548);
+                animation-name: animateArrive;
+                animation-duration: 1s;
+            }
+        }
+        .info {
+            width: 100%;
+            display: flex;
+            .summoner-data-wrapper {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            }
+            #loader {
+                top:45%;
+            }
+            h1 {
+                margin: .5em 1em 0  ;
+                font-size: 2em;
+                text-shadow: $text-border;
+            }
+            p {
+                margin: 0 2em;
+                font-weight: 700;
+                font-size: 1.2em;
+                text-shadow: $text-border;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+                border-radius: 5px;
+                margin: 1.4em 0 0 -1em;
+                padding: .3em;
+                background:rgba(0, 0, 0, 0.397);
+                height: fit-content;
+                transition: all .3s;
+                display:none;
+            }
+            a:hover {
+                background: rgba(0, 0, 0, 0.781);
+            }
+        }
+    }
+    /* Rank and match history */
+    .hero {
+        margin-top: 2em;
+        display: flex;
+        width: 100%;
+        .rank {
+            margin-right: 2em;
+            width: 30%;
+            .rank-container {
+                padding: 1em 0 1em 0;
+                width: 100%;
+                max-width: 15em;
+                text-align: center;
+                h1 {
+                    margin: 0;
+                    font-size: 1em;
+                }
+                h2 {
+                    margin: 0;
+                    font-size: 1.4em;
+                }
+                p {
+                    margin: 0;
+                }
+                .wins {
+                    color: $green;
+                }
+                .losses {
+                    color: $red;
+                }
+                .rank-img-wrapper {
+                    img {
+                        max-width: 80%;
+                    }
+                }
+            }
+        }
+        .right-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .match-history {
+                width: 100%;
+                margin-top: 1em;
+                .match-data-wrapper {
+                    border-radius: .5em;
+                    padding: .5em 0;
+                    background: rgba(0, 0, 0, 0.144);
+                    h2,span {
+                        text-align: center;
+                        font-size: 1em;
+                        font-weight: 400;
+                    }
+                    .wins {
+                        color: $green;
+                    }
+                    .losses {
+                        color: $red;
+                    }
+                }
+                .match {
+                    margin-top: .5em;
+                    border-radius: .5em;
+                    height: 8em;
+                    background: rgba(0, 0, 0, 0.144);
+                    display: flex;
+                    justify-content: space-between;
+                    animation-name: animateArrive;
+                    animation-duration: 1s;
+                    .match-info {
+                        padding: .4em;
+                        width: 5em;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        p {
+                            margin: 0;
+                            padding: 0;
+                        }
+                        #game-type {
+                            font-weight: 700;
+                            font-size: .85em;
+                        }
+                        #game-duration {
+                            font-weight: 400;
+                            font-size: .9em;
+                            color: rgb(201, 201, 201);
+                        }
+                        #game-result {
+                            font-size: .9em;
+                        }
+                        #game-time {
+                            font-weight: 300;
+                            font-size: .6em;
+                            color: rgb(201, 201, 201);
+                        }
+                    }
+                    .match-champion {
+                        padding: .4em;
+                        display:flex;
+                        flex-direction: column;
+                        margin: auto;
+                        img {
+                            border-radius: 3px;
+                            margin: .2em 0;
+                            max-height: 66px;
+                            max-width: 66px;
+                        }
+                        .match-summoners {
+                            display: flex;
+                            gap: .2em;
+                            img {
+                                border-radius: 3px;
+                                margin: 0;
+                                padding: 0;
+                                max-height: 32px;
+                            }
+                        }
+                    }
+                    .match-details {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        .match-stats {
+                            flex-direction: column;
+                            display: flex;
+                            text-align: center;
+                            justify-content: center;
+                            align-items: center;
+                            p {
+                                padding: 0;
+                                margin: 0;
+                            }
+                            #kda-ratio {
+                                font-size: .9em;
+                            }
+                            .kda-over-3 {
+                                color: gold;
+                            }
+                            #deaths {
+                                color: $red;
+                            }
+                            .farm-over-8 {
+                                color: gold;
+                            }
+                            #farm {
+                                font-size: 0.85em;
+                            }
+                        }
+                    }
+                    .match-metrics {
+                        margin: auto;
+                        padding: 1em;
+                        p {
+                            margin-top: 1.5em;
+                            text-align: center;
+                            font-size: .7em; 
+                        }
+                        #total-gold i{
+                            margin: .2em;
+                            color: gold;
+                        }
+                        #total-damage {
+                        margin-bottom: .3em;
+                        i{
+                            margin: .2em;
+                            color: rgb(153, 67, 67);
+                        }
+                        }
+                        .bar-empty {
+                            width: 3em;
+                            border-radius: 3px;
+                            background: white;
+                            height: 10px;
+                            .bar-fill {
+                                width: 50%; //JS injects this property
+                                border-radius: 2px;
+                                background: rgb(145, 58, 58);
+                                height: 10px;
+                            }
+                        }
+                    }
+                    .damage-over-80 {
+                        color: gold;
+                    }
+                    .match-items {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin: auto;
+                        width: 120px;
+                        img {
+                            border-radius: 4px;
+                            width: 30px;
+                            height: 30px;
+                            margin: .05em;
+                        }
+                        .empty-item {
+                            margin: .05em;
+                            border-radius: 4px;
+                            width: 30px;
+                            height: 30px;
+                            background: rgba(0, 0, 0, 0.342);
+                        }
+                    }
+                    .match-players {
+                        margin: auto;
+                        display: flex;
+                        .team1,.team2 {
+                            width: 9em;
+                            p {
+                                margin: .1em .1em;
+                                display: flex;
+                                padding: 0;
+                                img {
+                                    padding: 0;
+                                    margin: 0 .1em 0 0;
+                                    max-width: 20px;
+                                    max-height: 20px;
+                                }
+                            }
+                            a {
+                                overflow:hidden;
+                                font-size: .9em;
+                                font-weight: 300;
+                                text-decoration: none;
+                                color: rgb(141, 141, 141);
+                            }
+                            a:hover {
+                                color: #757283;;
+                                cursor: pointer;
+                            }
+                            .summoner {
+                                a {
+                                    font-weight: 400;
+                                    color: rgb(199, 199, 199);
+                                }
+                                a:hover {
+                                    color: #757283;;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+                .won-game {
+                    background-color: rgba(54, 158, 218, 0.144);
+                }
+                .lost-game {
+                    background-color: rgba(218, 54, 54, 0.144);
+                }
+            }
+            .load-more-btn {
+                width: 100%;
+                align-self: center;
+                justify-self: center;
+                border-radius: .5em;
+                padding: .5em 0;
+                background: rgba(0, 0, 0, 0.144);
+                text-align: center; 
+                cursor: pointer;
+                i {
+                    transition: all 0.3s ease-in-out 0s;
+                }
+            }
+            .load-more-btn:hover i{
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+@keyframes animateArrive {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}

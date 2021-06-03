@@ -1,0 +1,483 @@
+/* Variables */
+/* Profile */
+.profile {
+  /* Icon and name */
+  /* Rank and match history */
+}
+
+.profile .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-position-y: 20%;
+  background-position-x: center;
+  border-radius: .5em;
+}
+
+.profile .header .icon {
+  width: 128px;
+  height: 128px;
+  margin: 1em;
+}
+
+.profile .header .icon img {
+  width: 128px;
+  height: 128px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.548);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.548);
+  -webkit-animation-name: animateArrive;
+          animation-name: animateArrive;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.profile .header .info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profile .header .info .summoner-data-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.profile .header .info #loader {
+  top: 45%;
+}
+
+.profile .header .info h1 {
+  margin: .5em 1em 0;
+  font-size: 2em;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000, 0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000, 1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+}
+
+.profile .header .info p {
+  margin: 0 2em;
+  font-weight: 700;
+  font-size: 1.2em;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000, 0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000, 1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+}
+
+.profile .header .info a {
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  margin: 1.4em 0 0 -1em;
+  padding: .3em;
+  background: rgba(0, 0, 0, 0.397);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  display: none;
+}
+
+.profile .header .info a:hover {
+  background: rgba(0, 0, 0, 0.781);
+}
+
+.profile .hero {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.profile .hero .rank {
+  margin-right: 2em;
+  width: 30%;
+}
+
+.profile .hero .rank .rank-container {
+  padding: 1em 0 1em 0;
+  width: 100%;
+  max-width: 15em;
+  text-align: center;
+}
+
+.profile .hero .rank .rank-container h1 {
+  margin: 0;
+  font-size: 1em;
+}
+
+.profile .hero .rank .rank-container h2 {
+  margin: 0;
+  font-size: 1.4em;
+}
+
+.profile .hero .rank .rank-container p {
+  margin: 0;
+}
+
+.profile .hero .rank .rank-container .wins {
+  color: #43b843;
+}
+
+.profile .hero .rank .rank-container .losses {
+  color: #b84343;
+}
+
+.profile .hero .rank .rank-container .rank-img-wrapper img {
+  max-width: 80%;
+}
+
+.profile .hero .right-section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile .hero .right-section .match-history {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.profile .hero .right-section .match-history .match-data-wrapper {
+  border-radius: .5em;
+  padding: .5em 0;
+  background: rgba(0, 0, 0, 0.144);
+}
+
+.profile .hero .right-section .match-history .match-data-wrapper h2, .profile .hero .right-section .match-history .match-data-wrapper span {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.profile .hero .right-section .match-history .match-data-wrapper .wins {
+  color: #43b843;
+}
+
+.profile .hero .right-section .match-history .match-data-wrapper .losses {
+  color: #b84343;
+}
+
+.profile .hero .right-section .match-history .match {
+  margin-top: .5em;
+  border-radius: .5em;
+  height: 8em;
+  background: rgba(0, 0, 0, 0.144);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-animation-name: animateArrive;
+          animation-name: animateArrive;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.profile .hero .right-section .match-history .match .match-info {
+  padding: .4em;
+  width: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profile .hero .right-section .match-history .match .match-info p {
+  margin: 0;
+  padding: 0;
+}
+
+.profile .hero .right-section .match-history .match .match-info #game-type {
+  font-weight: 700;
+  font-size: .85em;
+}
+
+.profile .hero .right-section .match-history .match .match-info #game-duration {
+  font-weight: 400;
+  font-size: .9em;
+  color: #c9c9c9;
+}
+
+.profile .hero .right-section .match-history .match .match-info #game-result {
+  font-size: .9em;
+}
+
+.profile .hero .right-section .match-history .match .match-info #game-time {
+  font-weight: 300;
+  font-size: .6em;
+  color: #c9c9c9;
+}
+
+.profile .hero .right-section .match-history .match .match-champion {
+  padding: .4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
+.profile .hero .right-section .match-history .match .match-champion img {
+  border-radius: 3px;
+  margin: .2em 0;
+  max-height: 66px;
+  max-width: 66px;
+}
+
+.profile .hero .right-section .match-history .match .match-champion .match-summoners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .2em;
+}
+
+.profile .hero .right-section .match-history .match .match-champion .match-summoners img {
+  border-radius: 3px;
+  margin: 0;
+  padding: 0;
+  max-height: 32px;
+}
+
+.profile .hero .right-section .match-history .match .match-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profile .hero .right-section .match-history .match .match-details .match-stats {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile .hero .right-section .match-history .match .match-details .match-stats p {
+  padding: 0;
+  margin: 0;
+}
+
+.profile .hero .right-section .match-history .match .match-details .match-stats #kda-ratio {
+  font-size: .9em;
+}
+
+.profile .hero .right-section .match-history .match .match-details .match-stats .kda-over-3 {
+  color: gold;
+}
+
+.profile .hero .right-section .match-history .match .match-details .match-stats #deaths {
+  color: #b84343;
+}
+
+.profile .hero .right-section .match-history .match .match-details .match-stats .farm-over-8 {
+  color: gold;
+}
+
+.profile .hero .right-section .match-history .match .match-details .match-stats #farm {
+  font-size: 0.85em;
+}
+
+.profile .hero .right-section .match-history .match .match-metrics {
+  margin: auto;
+  padding: 1em;
+}
+
+.profile .hero .right-section .match-history .match .match-metrics p {
+  margin-top: 1.5em;
+  text-align: center;
+  font-size: .7em;
+}
+
+.profile .hero .right-section .match-history .match .match-metrics #total-gold i {
+  margin: .2em;
+  color: gold;
+}
+
+.profile .hero .right-section .match-history .match .match-metrics #total-damage {
+  margin-bottom: .3em;
+}
+
+.profile .hero .right-section .match-history .match .match-metrics #total-damage i {
+  margin: .2em;
+  color: #994343;
+}
+
+.profile .hero .right-section .match-history .match .match-metrics .bar-empty {
+  width: 3em;
+  border-radius: 3px;
+  background: white;
+  height: 10px;
+}
+
+.profile .hero .right-section .match-history .match .match-metrics .bar-empty .bar-fill {
+  width: 50%;
+  border-radius: 2px;
+  background: #913a3a;
+  height: 10px;
+}
+
+.profile .hero .right-section .match-history .match .damage-over-80 {
+  color: gold;
+}
+
+.profile .hero .right-section .match-history .match .match-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  width: 120px;
+}
+
+.profile .hero .right-section .match-history .match .match-items img {
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  margin: .05em;
+}
+
+.profile .hero .right-section .match-history .match .match-items .empty-item {
+  margin: .05em;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.342);
+}
+
+.profile .hero .right-section .match-history .match .match-players {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profile .hero .right-section .match-history .match .match-players .team1, .profile .hero .right-section .match-history .match .match-players .team2 {
+  width: 9em;
+}
+
+.profile .hero .right-section .match-history .match .match-players .team1 p, .profile .hero .right-section .match-history .match .match-players .team2 p {
+  margin: .1em .1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+.profile .hero .right-section .match-history .match .match-players .team1 p img, .profile .hero .right-section .match-history .match .match-players .team2 p img {
+  padding: 0;
+  margin: 0 .1em 0 0;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.profile .hero .right-section .match-history .match .match-players .team1 a, .profile .hero .right-section .match-history .match .match-players .team2 a {
+  overflow: hidden;
+  font-size: .9em;
+  font-weight: 300;
+  text-decoration: none;
+  color: #8d8d8d;
+}
+
+.profile .hero .right-section .match-history .match .match-players .team1 a:hover, .profile .hero .right-section .match-history .match .match-players .team2 a:hover {
+  color: #757283;
+  cursor: pointer;
+}
+
+.profile .hero .right-section .match-history .match .match-players .team1 .summoner a, .profile .hero .right-section .match-history .match .match-players .team2 .summoner a {
+  font-weight: 400;
+  color: #c7c7c7;
+}
+
+.profile .hero .right-section .match-history .match .match-players .team1 .summoner a:hover, .profile .hero .right-section .match-history .match .match-players .team2 .summoner a:hover {
+  color: #757283;
+  cursor: pointer;
+}
+
+.profile .hero .right-section .match-history .won-game {
+  background-color: rgba(54, 158, 218, 0.144);
+}
+
+.profile .hero .right-section .match-history .lost-game {
+  background-color: rgba(218, 54, 54, 0.144);
+}
+
+.profile .hero .right-section .load-more-btn {
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border-radius: .5em;
+  padding: .5em 0;
+  background: rgba(0, 0, 0, 0.144);
+  text-align: center;
+  cursor: pointer;
+}
+
+.profile .hero .right-section .load-more-btn i {
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.profile .hero .right-section .load-more-btn:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+@-webkit-keyframes animateArrive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animateArrive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=profileStyle.css.map */
